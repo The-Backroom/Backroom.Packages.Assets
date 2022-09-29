@@ -10,10 +10,10 @@ pool:
   vmImage: ubuntu-latest
 
 steps: 
-  - task: AzureStaticWebApp@0
-    inputs:
-      app_location: '/'
-      skip_app_build: true
-      skip_api_build: true
-      is_static_export: true
-      azure_static_web_apps_api_token: '50f29a2281d4ee90a85e98735569fcb41beb253d9be0bf0b00c6ed28f9ffce922-980b5fb0-977b-44cf-8a3f-bb9faf31dce000f48612'
+- task: AzureStaticWebApp@0
+  inputs:
+    app_location: ""
+    api_location: ""
+    output_location: ""
+    azure_static_web_apps_api_token: '$(azure_statc_web_apps_api_token)'
+
